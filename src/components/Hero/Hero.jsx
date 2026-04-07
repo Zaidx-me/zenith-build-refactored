@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import './Hero.css'
 import Button from '../Button/Button'
+import CalBookingButton from '../CalBookingButton/CalBookingButton'
 
 function Hero() {
     const heroRef = useRef(null)
@@ -53,9 +54,10 @@ function Hero() {
                         <Button href="#work" variant="primary" magnetic>
                             View Work <i className="ri-arrow-right-line"></i>
                         </Button>
-                        <Button href="#contact" variant="ghost">
-                            Start a Project
-                        </Button>
+                        <CalBookingButton className="hero-booking-button">
+                            <span className="hero-booking-title">Book Free Call</span>
+                            <span className="hero-booking-chip mono">Google Meet</span>
+                        </CalBookingButton>
                     </div>
 
                     {/* Trust bar */}

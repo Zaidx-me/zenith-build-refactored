@@ -7,6 +7,7 @@ import Testimonial from './components/Testimonial/Testimonial'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 import Dither from './components/Dither'
+import CalBookingButton from './components/CalBookingButton/CalBookingButton'
 import './App.css'
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
         </main>
         <Footer />
       </div>
+      <CalBookingButton floating showFreeBadge>
+        Book Free Call
+      </CalBookingButton>
     </div>
   )
 }
