@@ -19,7 +19,6 @@
 AGENXY.MEDIA is a modern agency website built for a creator-first digital media studio.
 
 It is designed to sell the brand properly: not like a generic template, not like a safe corporate landing page, but like a studio that actually understands content, attention, and how people buy creative services online.
-
 The site positions AGENXY as a sharp, technical, social-native media brand focused on turning raw ideas into polished content that performs.
 
 ## What the agency does
@@ -70,15 +69,6 @@ AGENXY-MEDIA/
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
-
-## Run locally
-
-```bash
-git clone https://github.com/aryanjohnsharma/AGENXY-MEDIA.git
-cd AGENXY-MEDIA
-npm install
-npm run dev
 ```
 
 ## Live website
