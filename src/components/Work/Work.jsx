@@ -26,14 +26,6 @@ const workItems = [
         metric: 'HeyGen Post-Production',
         href: 'https://www.instagram.com/ai.with.100',
         description: 'Raw AI videos transformed into polished reels'
-    },
-    {
-        index: '04',
-        title: 'B_MAHIR22',
-        category: 'Short Form',
-        metric: 'Viral Reels',
-        href: 'https://www.instagram.com/b_mahir22',
-        description: 'Hook-driven content with retention optimization'
     }
 ]
 
@@ -69,12 +61,6 @@ function Work() {
                             <span className="text-muted">that perform</span>
                         </h2>
                     </div>
-                    <Button
-                        href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD"
-                        target="_blank"
-                    >
-                        Full Portfolio <i className="ri-external-link-line"></i>
-                    </Button>
                 </div>
 
                 <div className="work-grid">
@@ -100,6 +86,15 @@ function Work() {
                             </div>
                         </a>
                     ))}
+                    
+                    <div className="reveal reveal-delay-4" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '280px' }}>
+                        <Button
+                            href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD"
+                            target="_blank"
+                        >
+                            Full Portfolio <i className="ri-external-link-line"></i>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>

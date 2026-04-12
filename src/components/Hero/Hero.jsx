@@ -83,7 +83,7 @@ function Hero() {
                     </div>
                     <div className="stat-divider"></div>
                     <div className="stat">
-                        <span className="stat-number">50+</span>
+                        <span className="stat-number">300+</span>
                         <span className="stat-label mono">Projects Delivered</span>
                     </div>
                     <div className="stat-divider"></div>

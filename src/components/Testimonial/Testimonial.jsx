@@ -31,9 +31,7 @@ function Testimonial() {
 
                     {/* Quote */}
                     <blockquote className="testimonial-quote reveal reveal-delay-1">
-                        The edit doesn't just look better—it <em>performs</em> better.
-                        My videos went from 'fine' to genuinely scroll-stopping.
-                        That's rare.
+                        The edit looks great, but more importantly, it's actually working. My videos used to be just "fine," but now people are actually stopping to watch. It's rare to see that kind of jump.
                     </blockquote>
 
                     {/* Author */}

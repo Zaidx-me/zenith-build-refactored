@@ -22,7 +22,7 @@
 
 .testimonial-quote {
     font-family: 'Clash Display', sans-serif;
-    font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+    font-size: clamp(1.25rem, 2.5vw, 2.25rem);
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 3rem;
