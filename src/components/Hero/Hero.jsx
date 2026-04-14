@@ -64,11 +64,11 @@ function Hero() {
                     <div className="hero-trust">
                         <span className="trust-label mono">Trusted Tools</span>
                         <div className="trust-logos">
-                            <span className="trust-logo">Premiere Pro</span>
+                            <span className="trust-logo">DaVinci Resolve</span>
                             <span className="trust-divider">•</span>
                             <span className="trust-logo">After Effects</span>
                             <span className="trust-divider">•</span>
-                            <span className="trust-logo">DaVinci Resolve</span>
+                            <span className="trust-logo">Topaz Video</span>
                             <span className="trust-divider">•</span>
                             <span className="trust-logo">Photoshop</span>
                         </div>
