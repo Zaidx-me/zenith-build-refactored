@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 0;
     /* Add some padding */
 }
 
@@ -16,7 +16,7 @@
     /* Ensure curve holds shape on small screens */
     /* Aspect ratio adjusted to prevent excessive height */
     /* aspect-ratio: 100 / 12; */
-    height: 400px;
+    height: 150px;
     overflow: visible;
     display: block;
     font-size: 6rem;
@@ -32,6 +32,6 @@
 @media (max-width: 768px) {
     .curved-loop-svg {
         font-size: 4rem;
-        height: 300px;
+        height: 100px;
     }
 }

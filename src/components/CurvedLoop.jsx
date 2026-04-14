@@ -113,7 +113,7 @@ const CurvedLoop = ({
             onPointerUp={endDrag}
             onPointerLeave={endDrag}
         >
-            <svg className="curved-loop-svg" viewBox="0 0 1440 320">
+            <svg className="curved-loop-svg" viewBox="0 0 1440 160">
                 <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
                     {text}
                 </text>

@@ -1,65 +1,50 @@
-import { useEffect, useRef } from 'react'
-import './CTA.css'
-import Button from '../Button/Button'
+import React, { useEffect, useRef } from 'react';
+import './CTA.css';
+import Button from '../Button/Button';
+import CalBookingButton from '../CalBookingButton/CalBookingButton';
 
 function CTA() {
-    const sectionRef = useRef(null)
+    const ctaRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible')
-                    }
-                })
-            },
-            { threshold: 0.2 }
-        )
+        const cta = ctaRef.current;
+        if (!cta) return;
 
-        const elements = sectionRef.current?.querySelectorAll('.reveal')
-        elements?.forEach(el => observer.observe(el))
+        const handleMouseMove = (e) => {
+            const rect = cta.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            cta.style.setProperty('--mouse-x', `${x}%`);
+            cta.style.setProperty('--mouse-y', `${y}%`);
+        };
 
-        return () => observer.disconnect()
-    }, [])
+        cta.addEventListener('mousemove', handleMouseMove);
+        return () => cta.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     return (
-        <section id="contact" className="cta" ref={sectionRef}>
-            <div className="cta-grid-bg"></div>
-            <div className="container">
-                <div className="cta-content reveal">
-                    <span className="section-label mono">Ready to transform?</span>
-                    <h2 className="cta-title">
-                        Let's talk craft.<br />
-                        <span className="text-muted">Not pitch decks.</span>
-                    </h2>
+        <section className="thin-cta" ref={ctaRef}>
+            <div className="thin-cta-glow"></div>
+            <div className="thin-cta-content">
+                <div className="thin-cta-left">
+                    <span className="thin-cta-status">
+                        <span className="pulse-dot"></span>
+                        Available for work
+                    </span>
+                    <span className="thin-cta-text mono">Let's craft something exceptional</span>
                 </div>
-
-                <div className="cta-form reveal reveal-delay-1">
-                    <div className="form-actions">
-                        <Button href="https://forms.gle/fVeCoSrFoSi55Mww9" target="_blank" rel="noopener noreferrer" variant="primary">
-                            Start Conversation <i className="ri-arrow-right-line"></i>
-                        </Button>
-                        <span className="form-note mono">
-                            or email directly: <a href="mailto:aryanjohnsharma@gmail.com">aryanjohnsharma@gmail.com</a>
-                        </span>
-                    </div>
-                </div>
-
-                {/* Quick links */}
-                <div className="cta-links reveal reveal-delay-2">
-                    <a href="https://www.instagram.com/agenxy.media" target="_blank" rel="noopener noreferrer" className="cta-link">
-                        <i className="ri-instagram-line"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD" target="_blank" rel="noopener noreferrer" className="cta-link">
-                        <i className="ri-folder-line"></i>
-                        <span>Portfolio</span>
-                    </a>
+                
+                <div className="thin-cta-buttons">
+                    <Button href="mailto:aryanjohnsharma@gmail.com" variant="ghost" className="thin-cta-btn secondary" magnetic>
+                        Start Project
+                    </Button>
+                    <CalBookingButton variant="primary" className="thin-cta-btn primary" showFreeBadge={true}>
+                        Book Call
+                    </CalBookingButton>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default CTA
+export default CTA;

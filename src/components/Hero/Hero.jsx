@@ -45,8 +45,8 @@ function Hero() {
 
                     {/* Subtitle */}
                     <p className="hero-subtitle">
-                        We don't polish videos. We transform them into
-                        <span className="highlight"> high-impact content</span> that performs.
+                        We don't just "edit" videos, we fix the pacing and punch up the visuals so people
+                        <span className="highlight"> actually stop scrolling.</span>
                     </p>
 
                     {/* CTA Group */}
