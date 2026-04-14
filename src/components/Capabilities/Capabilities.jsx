@@ -6,34 +6,33 @@ const capabilities = [
     {
         icon: 'ri-film-line',
         title: 'Precision Editing',
-        description: 'Premiere Pro & DaVinci Resolve. Narrative pacing that keeps viewers watching.',
-        featured: true
+        description: 'Premiere Pro & DaVinci Resolve. Pacing that keeps viewers watching.',
     },
     {
         icon: 'ri-magic-line',
         title: 'Motion & VFX',
-        description: 'After Effects mastery. Custom graphics that elevate production value.'
+        description: 'After Effects mastery. Graphics that elevate production value.',
     },
     {
         icon: 'ri-smartphone-line',
         title: 'Short-Form',
-        description: 'Reels, TikToks, Shorts. Hook-driven with retention-optimized pacing.'
+        description: 'Reels, TikToks, Shorts. Hook-driven, retention-optimized.',
     },
     {
         icon: 'ri-brain-line',
         title: 'AI Enhancement',
-        description: 'Upscaling, noise reduction, intelligent compression. Modern tools.'
+        description: 'Upscaling, noise reduction, intelligent compression.',
     },
     {
         icon: 'ri-sound-module-line',
         title: 'Sound Design',
-        description: 'Audio is half the experience. We mix soundscapes that hit.'
+        description: 'Audio is half the experience. Soundscapes that hit.',
     },
     {
         icon: 'ri-image-line',
         title: 'Thumbnails',
-        description: 'Click-worthy thumbnails designed for CTR. Photoshop-crafted.'
-    }
+        description: 'Click-worthy thumbnails designed for CTR.',
+    },
 ]
 
 const tools = ['PREMIERE PRO', 'AFTER EFFECTS', 'DAVINCI RESOLVE', 'PHOTOSHOP', 'TOPAZ AI', 'CAPCUT']
@@ -44,7 +43,7 @@ function Capabilities() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible')
                     }
@@ -54,7 +53,7 @@ function Capabilities() {
         )
 
         const elements = sectionRef.current?.querySelectorAll('.reveal')
-        elements?.forEach(el => observer.observe(el))
+        elements?.forEach((el) => observer.observe(el))
 
         return () => observer.disconnect()
     }, [])
@@ -62,25 +61,26 @@ function Capabilities() {
     return (
         <section id="capabilities" className="capabilities" ref={sectionRef}>
             <div className="container">
-                <div className="capabilities-header reveal">
+                <div className="cap-header-row reveal">
                     <span className="section-label mono">Capabilities</span>
                     <h2 className="capabilities-title">
-                        What we<br />
-                        <span className="accent">bring to the table</span>
+                        What we <span className="accent">bring to the table</span>
                     </h2>
                 </div>
 
                 <div className="cap-grid">
                     {capabilities.map((cap, index) => (
                         <div
-                            className={`cap-card ${cap.featured ? 'featured' : ''} reveal reveal-delay-${(index % 3) + 1}`}
+                            className={`cap-card reveal reveal-delay-${(index % 3) + 1}`}
                             key={index}
                         >
                             <div className="cap-icon">
                                 <i className={cap.icon}></i>
                             </div>
-                            <h3 className="cap-title">{cap.title}</h3>
-                            <p className="cap-desc">{cap.description}</p>
+                            <div className="cap-text">
+                                <h3 className="cap-title">{cap.title}</h3>
+                                <p className="cap-desc">{cap.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>

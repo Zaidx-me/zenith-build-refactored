@@ -1,14 +1,18 @@
 .capabilities {
-    padding: 6rem 0 0;
+    padding: 3rem 0 0;
     background: rgba(15, 15, 20, 0.85);
 }
 
-.capabilities-header {
-    margin-bottom: 5rem;
+/* Header row — label + title inline */
+.cap-header-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .capabilities-title {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
     line-height: 1.1;
 }
 
@@ -16,17 +20,20 @@
     color: var(--accent);
 }
 
-/* Bento grid */
+/* Compact bento grid — 3 columns, tight */
 .cap-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .cap-card {
     position: relative;
-    padding: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
     background: var(--void);
     border: 1px solid var(--border);
     transition: all 0.4s var(--ease-out);
@@ -46,7 +53,7 @@
 }
 
 .cap-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border-color: var(--border-strong);
 }
 
@@ -54,21 +61,16 @@
     transform: scaleX(1);
 }
 
-.cap-card.featured {
-    grid-row: span 2;
-    background: linear-gradient(135deg, var(--elevated), var(--void));
-}
-
 .cap-icon {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     color: var(--accent);
     background: var(--accent-dim);
-    margin-bottom: 1.5rem;
     transition: all 0.3s var(--ease-out);
 }
 
@@ -77,18 +79,24 @@
     color: var(--void);
 }
 
+.cap-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
 .cap-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .cap-desc {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* Tool marquee */
 /* Tool curved loop customization */
 .capabilities-loop-text {
     fill: var(--text);
@@ -116,15 +124,16 @@
     .cap-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .cap-card.featured {
-        grid-row: span 1;
-    }
 }
 
 @media (max-width: 768px) {
     .capabilities {
-        padding: 4rem 0;
+        padding: 2rem 0;
+    }
+
+    .cap-header-row {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .cap-grid {
@@ -132,6 +141,6 @@
     }
 
     .cap-card {
-        padding: 2rem;
+        padding: 1rem 1.25rem;
     }
 }
