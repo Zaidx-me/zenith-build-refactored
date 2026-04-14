@@ -87,14 +87,37 @@ function Work() {
                         </a>
                     ))}
                     
-                    <div className="reveal reveal-delay-4" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '280px' }}>
-                        <Button
-                            href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD"
-                            target="_blank"
-                        >
-                            Full Portfolio <i className="ri-external-link-line"></i>
-                        </Button>
-                    </div>
+                    <a 
+                        href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="portfolio-window reveal reveal-delay-4"
+                    >
+                        {/* macOS title bar */}
+                        <div className="window-titlebar">
+                            <div className="window-dots">
+                                <span className="dot dot-red"></span>
+                                <span className="dot dot-yellow"></span>
+                                <span className="dot dot-green"></span>
+                            </div>
+                            <span className="window-title mono">portfolio — Google Drive</span>
+                        </div>
+                        
+                        {/* Window body */}
+                        <div className="window-body">
+                            <div className="window-folder-icon">
+                                <i className="ri-folder-5-fill"></i>
+                            </div>
+                            <div className="window-info">
+                                <span className="window-heading">Full Portfolio</span>
+                                <span className="window-sub mono">View all projects & case studies</span>
+                            </div>
+                            <div className="window-cta">
+                                <span className="window-cta-text mono">Open</span>
+                                <i className="ri-arrow-right-up-line"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

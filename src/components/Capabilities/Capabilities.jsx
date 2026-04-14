@@ -86,11 +86,11 @@ function Capabilities() {
                 </div>
 
                 {/* Tool curved loop */}
-                <div className="reveal">
+                <div className="reveal" style={{ margin: '1rem 0' }}>
                     <CurvedLoop
                         marqueeText={tools.join(' ✦ ') + ' ✦ '}
-                        speed={2}
-                        curveAmount={80}
+                        speed={0.8}
+                        curveAmount={0}
                         direction="left"
                         interactive
                         className="capabilities-loop-text"
