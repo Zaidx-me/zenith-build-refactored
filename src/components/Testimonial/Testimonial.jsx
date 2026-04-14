@@ -80,10 +80,16 @@ function Testimonial() {
     return (
         <section className="testimonial" ref={sectionRef}>
             <div className="container">
+                <div className="testimonial-header reveal">
+                    <div className="quote-mark">"</div>
+                    <span className="testimonial-label mono">Testimonial</span>
+                    <h2 className="testimonial-title">
+                        What our <span className="accent">clients say</span>
+                    </h2>
+                </div>
                 <div className="testimonial-layout">
                     {/* Left — Author card */}
                     <div className="testimonial-left reveal">
-                        <div className="quote-mark">"</div>
                         <div className="testimonial-author-card vertical-layout">
                             <audio ref={audioRef} src={jamesAudio} onEnded={() => setIsPlaying(false)} />
                             
