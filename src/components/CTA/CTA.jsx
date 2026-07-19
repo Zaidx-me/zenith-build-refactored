@@ -18,7 +18,25 @@ function CTA() {
         };
 
         cta.addEventListener('mousemove', handleMouseMove);
-        return () => cta.removeEventListener('mousemove', handleMouseMove);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible')
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '-50px' }
+        )
+
+        const elements = cta.querySelectorAll('.reveal')
+        elements.forEach(el => observer.observe(el))
+
+        return () => {
+            cta.removeEventListener('mousemove', handleMouseMove)
+            observer.disconnect()
+        }
     }, []);
 
     return (
