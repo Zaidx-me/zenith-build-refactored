@@ -4,38 +4,38 @@ import CurvedLoop from '../CurvedLoop'
 
 const capabilities = [
     {
-        icon: 'ri-film-line',
-        title: 'Precision Editing',
-        description: 'Premiere Pro & DaVinci Resolve. Pacing that keeps viewers watching.',
+        icon: 'ri-palette-line',
+        title: 'UI/UX Design',
+        description: 'User-centered interfaces that balance aesthetics with usability.',
     },
     {
-        icon: 'ri-magic-line',
-        title: 'Motion & VFX',
-        description: 'After Effects mastery. Graphics that elevate production value.',
+        icon: 'ri-code-line',
+        title: 'Web Development',
+        description: 'Fast, accessible, and scalable web applications with modern stacks.',
     },
     {
         icon: 'ri-smartphone-line',
-        title: 'Short-Form',
-        description: 'Reels, TikToks, Shorts. Hook-driven, retention-optimized.',
+        title: 'Mobile Apps',
+        description: 'Cross-platform and native mobile experiences for iOS and Android.',
     },
     {
-        icon: 'ri-brain-line',
-        title: 'AI Enhancement',
-        description: 'Upscaling, noise reduction, intelligent compression.',
+        icon: 'ri-database-2-line',
+        title: 'Backend & APIs',
+        description: 'Robust server-side architecture, RESTful and GraphQL APIs.',
     },
     {
-        icon: 'ri-sound-module-line',
-        title: 'Sound Design',
-        description: 'Audio is half the experience. Soundscapes that hit.',
+        icon: 'ri-line-chart-line',
+        title: 'Growth Strategy',
+        description: 'Data-driven growth audits, conversion optimization, and analytics.',
     },
     {
-        icon: 'ri-image-line',
-        title: 'Thumbnails',
-        description: 'Click-worthy thumbnails designed for CTR.',
+        icon: 'ri-earth-line',
+        title: 'Brand Design',
+        description: 'Visual identity systems and brand guidelines across touchpoints.',
     },
 ]
 
-const tools = ['PREMIERE PRO', 'AFTER EFFECTS', 'DAVINCI RESOLVE', 'PHOTOSHOP', 'TOPAZ AI', 'CAPCUT']
+const tools = ['REACT', 'NEXT.JS', 'TYPESCRIPT', 'NODE.JS', 'REACT NATIVE', 'NESTJS', 'PRISMA', 'TAILWIND CSS']
 
 function Capabilities() {
     const sectionRef = useRef(null)

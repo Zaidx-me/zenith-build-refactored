@@ -5,27 +5,51 @@ import Button from '../Button/Button'
 const workItems = [
     {
         index: '01',
-        title: 'FROZT MUZIC',
-        category: 'Music Visuals',
-        metric: '1M+ Reach',
-        href: 'https://www.instagram.com/froztmuzic',
-        description: 'Music visualization and rhythm-driven edits'
+        title: 'APPLICATOR',
+        category: 'Mobile Apps',
+        metric: 'React Native',
+        href: 'https://applicator.netlify.app',
+        description: 'AI-powered job application assistant for Android'
     },
     {
         index: '02',
-        title: 'AGENXY CLIENTS BEFORE AND AFTER',
-        category: 'Agency Work',
-        metric: 'Brand Content',
-        href: 'https://www.instagram.com/agenxy.media',
-        description: 'Professional client content and campaigns'
+        title: 'MAKTABA',
+        category: 'Mobile Apps',
+        metric: 'Expo',
+        href: 'https://github.com/Zaidx-me/maktaba',
+        description: 'Free Urdu book reading app with 3,000+ local books'
     },
     {
         index: '03',
-        title: 'AI-RAW VIDS TO EDITED VIDS',
-        category: 'AI Enhancement',
-        metric: 'HeyGen Post-Production',
-        href: 'https://www.instagram.com/ai.with.100',
-        description: 'Raw AI videos transformed into polished reels'
+        title: 'WHATBOT',
+        category: 'API',
+        metric: 'NestJS',
+        href: 'https://github.com/Zaidx-me/whatbot',
+        description: 'Open-source WhatsApp API Gateway with pluggable architecture'
+    },
+    {
+        index: '04',
+        title: 'ZAREEN PORTFOLIO',
+        category: 'Web',
+        metric: 'Remix',
+        href: 'https://zareen.qzz.io',
+        description: 'Personal design portfolio with 3D interactive background'
+    },
+    {
+        index: '05',
+        title: 'HIDAYA SEEKER',
+        category: 'Web',
+        metric: 'React & React Native',
+        href: 'https://www.hidayaseeker.com/',
+        description: 'Modern Islamic platform for Quran and prayer times'
+    },
+    {
+        index: '06',
+        title: 'MUM FLOORING STUDIO',
+        category: 'Web',
+        metric: 'Next.js',
+        href: 'https://mumflooringstudio.co.uk/',
+        description: 'Professional flooring company website for UK market'
     }
 ]
 
@@ -88,7 +112,7 @@ function Work() {
                     ))}
                     
                     <a 
-                        href="https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD" 
+                        href="https://github.com/Zaidx-me" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="portfolio-window reveal reveal-delay-4"
@@ -100,17 +124,17 @@ function Work() {
                                 <span className="dot dot-yellow"></span>
                                 <span className="dot dot-green"></span>
                             </div>
-                            <span className="window-title mono">portfolio — Google Drive</span>
+                            <span className="window-title mono">projects — GitHub</span>
                         </div>
                         
                         {/* Window body */}
                         <div className="window-body">
                             <div className="window-folder-icon">
-                                <i className="ri-folder-5-fill"></i>
+                                <i className="ri-github-fill"></i>
                             </div>
                             <div className="window-info">
-                                <span className="window-heading">Full Portfolio</span>
-                                <span className="window-sub mono">View all projects & case studies</span>
+                                <span className="window-heading">All Projects</span>
+                                <span className="window-sub mono">View open source work on GitHub</span>
                             </div>
                             <div className="window-cta">
                                 <span className="window-cta-text mono">Open</span>

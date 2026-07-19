@@ -1,21 +1,27 @@
 import { useEffect, useRef } from 'react'
 import './Narrative.css'
 
-const problems = [
+const stats = [
+    { number: '13+', label: 'Projects' },
+    { number: '3+', label: 'Years' },
+    { number: '7+', label: 'Industries' },
+]
+
+const process = [
     {
         number: '01',
-        title: "Hours lost to editing",
-        description: "Time you could spend creating, building your brand, or actually living your life."
+        title: "Discover",
+        description: "We immerse in your business — goals, audience, competition, and constraints to define the strategy."
     },
     {
         number: '02',
-        title: "Videos that don't feel 'premium'",
-        description: "The pacing's off. Sound is muddy. Something's missing—and viewers notice."
+        title: "Research",
+        description: "Deep user research and market analysis to uncover opportunities and validate assumptions."
     },
     {
         number: '03',
-        title: "Retention drops at 30 seconds",
-        description: "The hook isn't hooking. You're losing viewers before the value hits."
+        title: "Design",
+        description: "Iterative prototyping and visual design until the experience feels right across every touchpoint."
     }
 ]
 
@@ -41,43 +47,49 @@ function Narrative() {
     }, [])
 
     return (
-        <section id="process" className="narrative" ref={sectionRef}>
+        <section id="about" className="narrative" ref={sectionRef}>
             <div className="container">
                 {/* Section header */}
                 <div className="narrative-header reveal">
-                    <span className="section-label mono">The Problem</span>
+                    <span className="section-label mono">About Us</span>
                     <h2 className="narrative-title">
-                        Your content deserves<br />
-                        better than <span className="strike">good enough</span>
+                        We build<br />
+                        digital <span className="accent">excellence</span>
                     </h2>
                 </div>
 
-                {/* Problem cards */}
+                {/* About content */}
                 <div className="problem-grid">
-                    {problems.map((problem, index) => (
+                    <div className="problem-card reveal reveal-delay-1">
+                        <p className="problem-desc">
+                            From startups to enterprises, we craft digital products that drive
+                            real business outcomes — combining deep technical expertise with
+                            sharp design thinking.
+                        </p>
+                    </div>
+                    {stats.map((stat, index) => (
                         <div
-                            className={`problem-card reveal reveal-delay-${index + 1}`}
-                            key={problem.number}
+                            className={`problem-card reveal reveal-delay-${index + 2}`}
+                            key={stat.label}
                         >
-                            <span className="problem-number mono">{problem.number}</span>
-                            <h3 className="problem-title">{problem.title}</h3>
-                            <p className="problem-desc">{problem.description}</p>
+                            <span className="problem-number mono">{stat.number}</span>
+                            <h3 className="problem-title">{stat.label}</h3>
                         </div>
                     ))}
                 </div>
 
-                {/* Solution */}
+                {/* Process steps */}
                 <div className="solution reveal">
                     <div className="solution-line"></div>
                     <div className="solution-content">
-                        <span className="section-label mono accent">The Solution</span>
+                        <span className="section-label mono accent">How We Work</span>
                         <h3 className="solution-title">
-                            Raw input. Proven process.<br />
-                            <span className="accent">High-impact output.</span>
+                            From discovery to deployment,<br />
+                            <span className="accent">we've got you covered.</span>
                         </h3>
                         <p className="solution-desc">
-                            We take your footage and transform it through a precision-driven workflow.
-                            No gimmicks. No over-editing. Just content that performs.
+                            Our proven process ensures every project is delivered with precision,
+                            quality, and on time. We don't just build — we partner with you.
                         </p>
                     </div>
                 </div>

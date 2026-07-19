@@ -64,9 +64,9 @@ function Header() {
 
                         <div className="nav-center">
                             <ul className="nav-links">
+                                <li><a href="#about" className="nav-link">About</a></li>
                                 <li><a href="#work" className="nav-link">Work</a></li>
-                                <li><a href="#process" className="nav-link">Process</a></li>
-                                <li><a href="#capabilities" className="nav-link">Capabilities</a></li>
+                                <li><a href="#capabilities" className="nav-link">Services</a></li>
                             </ul>
                         </div>
 
@@ -104,21 +104,21 @@ function Header() {
                 <nav className="mobile-nav">
                     <ul className="mobile-nav-links">
                         <li>
-                            <a href="#work" className="mobile-nav-link" onClick={handleNavClick}>
+                            <a href="#about" className="mobile-nav-link" onClick={handleNavClick}>
                                 <span className="mobile-nav-number">01</span>
-                                Work
+                                About
                             </a>
                         </li>
                         <li>
-                            <a href="#process" className="mobile-nav-link" onClick={handleNavClick}>
+                            <a href="#work" className="mobile-nav-link" onClick={handleNavClick}>
                                 <span className="mobile-nav-number">02</span>
-                                Process
+                                Work
                             </a>
                         </li>
                         <li>
                             <a href="#capabilities" className="mobile-nav-link" onClick={handleNavClick}>
                                 <span className="mobile-nav-number">03</span>
-                                Capabilities
+                                Services
                             </a>
                         </li>
                     </ul>

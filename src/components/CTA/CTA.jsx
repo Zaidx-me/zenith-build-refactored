@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './CTA.css';
-import Button from '../Button/Button';
-import CalBookingButton from '../CalBookingButton/CalBookingButton';
+import ContactForm from '../ContactForm/ContactForm';
 
 function CTA() {
     const ctaRef = useRef(null);
@@ -23,24 +22,31 @@ function CTA() {
     }, []);
 
     return (
-        <section className="thin-cta" ref={ctaRef}>
-            <div className="thin-cta-glow"></div>
-            <div className="thin-cta-content">
-                <div className="thin-cta-left">
-                    <span className="thin-cta-status">
-                        <span className="pulse-dot"></span>
-                        Available for work
-                    </span>
-                    <span className="thin-cta-text mono">Let's craft something exceptional</span>
-                </div>
-                
-                <div className="thin-cta-buttons">
-                    <Button href="mailto:aryanjohnsharma@gmail.com" variant="ghost" className="thin-cta-btn secondary" magnetic>
-                        Start Project
-                    </Button>
-                    <CalBookingButton variant="primary" className="thin-cta-btn primary" showFreeBadge={true}>
-                        Book Call
-                    </CalBookingButton>
+        <section className="contact-section" id="contact" ref={ctaRef}>
+            <div className="container">
+                <div className="contact-layout">
+                    <div className="contact-info reveal">
+                        <span className="section-label mono">Connect With Us</span>
+                        <h2 className="contact-title">
+                            Let's talk
+                        </h2>
+                        <p className="contact-desc">
+                            Ready to start your next project? Fill out the form and we'll get back to you within a couple of days.
+                        </p>
+                        <div className="contact-details">
+                            <div className="contact-detail-item">
+                                <i className="ri-mail-line"></i>
+                                <span>contact@zenithbuild.com</span>
+                            </div>
+                            <div className="contact-detail-item">
+                                <i className="ri-map-pin-line"></i>
+                                <span>Remote / On-site</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="contact-form-wrapper reveal reveal-delay-1">
+                        <ContactForm />
+                    </div>
                 </div>
             </div>
         </section>

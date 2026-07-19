@@ -1,40 +1,43 @@
-# Agenxy.Media Brand Identity & Portfolio
+# Zenith Build Brand Identity & Portfolio
 
-## 🎬 Portfolio & Links
+## Portfolio & Links
 
 ### Sample Work
-- **Google Drive (Edited Videos):** [Link](https://drive.google.com/drive/folders/1RJ9J3ZQAHWlyDXyg43mF1DDZFYRB2HfD)
+- **Hidaya Seeker:** [hidayaseeker.com](https://www.hidayaseeker.com/)
+- **MUM Flooring Studio:** [mumflooringstudio.co.uk](https://mumflooringstudio.co.uk/)
+- **Applicator:** [applicator.netlify.app](https://applicator.netlify.app)
+- **Maktaba:** [github.com/Zaidx-me/maktaba](https://github.com/Zaidx-me/maktaba)
+- **Whatbot:** [github.com/Zaidx-me/whatbot](https://github.com/Zaidx-me/whatbot)
 
-### Instagram Edits
-- **FROZT Muzic** (Music visuals, 1M+ reach): [froztmuzic](https://www.instagram.com/froztmuzic?igsh=cHhka2h6MHl3cnBm)
-- **aestheticmux** (Personal passion/hobby edits): [aestheticmux](https://www.instagram.com/aestheticmux?igsh=ZWl5dHUwYzUzaWwx)
-- **Agenxy Media** (Agency projects & client content): [agenxy.media](https://www.instagram.com/agenxy.media?igsh=MW04bHlka3N4OWZhZA==)
-- **b_mahir22** (Reels edited till Aug 9th): [b_mahir22](https://www.instagram.com/b_mahir22?igsh=MWJjemo3Ynl4NGZheg==)
-- **ai.with.100** (HeyGen AI raw videos -> polished reels): [ai.with.100](https://www.instagram.com/ai.with.100?igsh=MTB1aXBpbDd1dTE1Yw==)
+### Social Media
+- **LinkedIn:** [zenith-build](https://www.linkedin.com/in/zenith-build)
+- **Instagram:** [zenith._.build](https://www.instagram.com/zenith._.build)
+- **GitHub:** [zaidx-me](https://github.com/zaidx-me)
+- **Threads:** [zenith._.build](https://www.threads.com/@zenith._.build)
 
-## 🧬 Brand Philosophy & Positioning
-
-![Brand Screenshot](/C:/Users/aryan/.gemini/antigravity/brain/ac6d4536-b130-41de-8dbd-2711fc579443/uploaded_image_1767285340553.png)
+## Brand Philosophy & Positioning
 
 **Core Identity:**
-- **Personal-Led Creative Studio:** Built around **Aryan Sharma**. Not a faceless agency.
-- **Visual Transformation Studio:** "Before-and-after edits are not just a format, they are the philosophy." Show the raw input vs. high-impact output.
-- **Tone:** "Tech geek who knows his craft." Confident, practical, result-oriented. Not corporate.
+- **Full-Stack Digital Studio:** Building scalable web and mobile applications.
+- **Technical Excellence:** Modern stacks, clean code, production-ready deployments.
+- **Tone:** Professional, technical, results-oriented. Not corporate.
 
 **Skill Set & Tools:**
-- **Traditional:** Premiere Pro, Photoshop, After Effects, DaVinci Resolve.
-- **Modern/AI:** AI art, upscaling, compression, thumbnails, short-form optimization.
-- **Services:** Reels, YouTube, gaming content, short films, Instagram management, livestream tooling.
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
+- **Backend:** Node.js, NestJS, Prisma, PostgreSQL
+- **Mobile:** React Native, Expo
+- **DevOps:** Docker, AWS, Vercel
+- **Design:** Figma, UI/UX Design
 
 **Target Audience:**
-- Influencers, YouTubers, Startups.
-- People who understand creator culture (gaming montages, OBS, coaching).
+- Startups, SMBs, and enterprises.
+- Businesses looking for custom web and mobile solutions.
 
-**Positioning Statement (Draft):**
-*A creative editor-studio hybrid. Highly technical, trend-aware, and hands-on. Focused on visible skill, transformation, and reliability rather than glossy branding.*
+**Positioning Statement:**
+*A full-stack digital studio building scalable web and mobile applications with modern technologies. Focused on clean code, performance, and delivering real business outcomes.*
 
-## 📝 Implementation Notes for Website
-- **About Section:** Highlight Aryan Sharma and the "personal-led" aspect.
-- **Portfolio Section:** Use "Before vs After" comparisons where possible (e.g., hover effects or split sliders).
-- **Services:** Explicitly list the software stack (Pr, Ae, Ps, Resolve) to signal technical depth.
-- **Copywriting:** Use practical, "tech-geek" language. Focus on process and unlimited revisions as trust signals.
+## Implementation Notes for Website
+- **About Section:** Highlight the team and technical expertise.
+- **Portfolio Section:** Showcase live projects with links to demos and GitHub.
+- **Services:** Explicitly list the technology stack to signal technical depth.
+- **Copywriting:** Use practical, technical language. Focus on process and reliability as trust signals.

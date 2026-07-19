@@ -24,7 +24,7 @@ function Footer() {
     }, [])
 
     const handleCopyEmail = () => {
-        navigator.clipboard.writeText('aryanjohnsharma@gmail.com');
+        navigator.clipboard.writeText('contact@zenithbuild.com');
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     }
@@ -36,7 +36,7 @@ function Footer() {
                 {/* Top Section */}
                 <div className="footer-top">
                     <div className="footer-top-left">
-                        <p className="footer-creator">Created and designed by Aryan Sharma © 2026</p>
+                        <p className="footer-creator">© 2026 Zenith Build. All rights reserved.</p>
                         <div className="footer-actions">
 
                             <button onClick={handleCopyEmail} className="footer-btn footer-btn-outline">
@@ -44,17 +44,17 @@ function Footer() {
                             </button>
                             <div className="footer-socials">
 
-                                <a href="https://aryanjohnsharma.github.io/" target="_blank" rel="noopener noreferrer" className="social-circle">
-                                    <i className="ri-global-line"></i>
+                                <a href="https://www.linkedin.com/in/zenith-build" target="_blank" rel="noopener noreferrer" className="social-circle">
+                                    <i className="ri-linkedin-fill"></i>
                                 </a>
-                                <a href="https://x.com/aryanjohnsharma" target="_blank" rel="noopener noreferrer" className="social-circle">
-                                    <i className="ri-twitter-x-line"></i>
+                                <a href="https://www.threads.com/@zenith._.build" target="_blank" rel="noopener noreferrer" className="social-circle">
+                                    <i className="ri-threads-fill"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@aryanjohnsharma" target="_blank" rel="noopener noreferrer" className="social-circle">
-                                    <i className="ri-youtube-line"></i>
+                                <a href="https://github.com/zaidx-me" target="_blank" rel="noopener noreferrer" className="social-circle">
+                                    <i className="ri-github-fill"></i>
                                 </a>
-                                <a href="https://t.me/aryanjohnsharma" target="_blank" rel="noopener noreferrer" className="social-circle">
-                                    <i className="ri-telegram-line"></i>
+                                <a href="https://www.instagram.com/zenith._.build" target="_blank" rel="noopener noreferrer" className="social-circle">
+                                    <i className="ri-instagram-line"></i>
                                 </a>
                             </div>
                         </div>

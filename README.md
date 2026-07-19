@@ -1,36 +1,32 @@
-# AGENXY.MEDIA
+# ZENITH BUILD
 
 <p align="center">
-  <img src="./public/github-preview.png" alt="AGENXY.MEDIA website preview" width="100%" />
+  <img src="./public/github-preview.png" alt="ZENITH BUILD website preview" width="100%" />
 </p>
 
 <p align="center">
-  Premium digital media agency website for short-form editing, creator branding, and social-first content.
-</p>
-
-<p align="center">
-  <a href="https://agenxymedia.vercel.app"><strong>Live Site</strong></a>
+  Premium digital agency website for web development, mobile apps, and digital transformation.
 </p>
 
 ---
 
 ## What this is
 
-AGENXY.MEDIA is a modern agency website built for a creator-first digital media studio.
+ZENITH BUILD is a modern agency website built for a creator-first digital studio.
 
-It is designed to sell the brand properly: not like a generic template, not like a safe corporate landing page, but like a studio that actually understands content, attention, and how people buy creative services online.
-The site positions AGENXY as a sharp, technical, social-native media brand focused on turning raw ideas into polished content that performs.
+It is designed to sell the brand properly: not like a generic template, not like a safe corporate landing page, but like a studio that actually understands technology, design, and how businesses buy digital services online.
+The site positions ZENITH as a sharp, technical, full-stack digital brand focused on turning ideas into scalable digital products.
 
 ## What the agency does
 
-AGENXY.MEDIA is built around services like:
+ZENITH BUILD provides services like:
 
-- Short-form video editing
-- Reels editing
-- YouTube editing
-- Creator branding
-- Social-first content production
-- Visual storytelling for creators, startups, and personal brands
+- UI/UX Design
+- Web Development
+- Mobile App Development
+- Backend & API Development
+- Growth Strategy
+- Brand Design
 
 ## What the site includes
 
@@ -52,40 +48,13 @@ AGENXY.MEDIA is built around services like:
 - React Three Fiber
 - Vercel
 
-## Project structure
-
-```bash
-AGENXY-MEDIA/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── lib/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── brand_identity.md
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
 ## Live website
 
-[https://agenxymedia.vercel.app](https://agenxymedia.vercel.app)
-
-## Why this repo exists
-
-A lot of agency websites look interchangeable.
-
-This one was built to feel more specific: more founder-led, more internet-aware, more aligned with creator culture, and way more intentional in how it presents the brand.
-
-It is part portfolio, part positioning system, and part proof that the studio can actually execute.
+[https://zenith-build.vercel.app](https://zenith-build.vercel.app)
 
 ## Credits
 
-Designed and developed by [Aryan Sharma](https://github.com/aryanjohnsharma)
+Designed and developed by [zaidxme](https://github.com/zaidx-me)
 
 ## License
 

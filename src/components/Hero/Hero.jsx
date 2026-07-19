@@ -31,22 +31,21 @@ function Hero() {
                     {/* Eyebrow */}
                     <div className="hero-eyebrow">
                         <span className="eyebrow-line"></span>
-                        <span className="mono">Visual Transformation Studio</span>
+                        <span className="mono">Digital Agency</span>
                     </div>
 
                     {/* Main title */}
                     <h1 className="hero-title">
                         <span className="title-line">
-                            <span className="title-word">RAW</span>
-                            <span className="title-arrow">→</span>
-                            <span className="title-word accent">REFINED</span>
+                            <span className="title-word">ZENITH</span>
+                            <span className="title-word accent">BUILD</span>
                         </span>
                     </h1>
 
                     {/* Subtitle */}
                     <p className="hero-subtitle">
-                        We don't just "edit" videos, we fix the pacing and punch up the visuals so people
-                        <span className="highlight"> actually stop scrolling.</span>
+                        We craft digital experiences that blend bold creativity with strategic thinking.
+                        <span className="highlight"> From startups to enterprises.</span>
                     </p>
 
                     {/* CTA Group */}
@@ -55,22 +54,22 @@ function Hero() {
                             View Work <i className="ri-arrow-right-line"></i>
                         </Button>
                         <CalBookingButton className="hero-booking-button">
-                            <span className="hero-booking-title">Book Free Call</span>
-                            <span className="hero-booking-chip mono">Google Meet</span>
+                            <span className="hero-booking-title">Hire Developers</span>
+                            <span className="hero-booking-chip mono">Let's Talk</span>
                         </CalBookingButton>
                     </div>
 
                     {/* Trust bar */}
                     <div className="hero-trust">
-                        <span className="trust-label mono">Trusted Tools</span>
+                        <span className="trust-label mono">Tech Stack</span>
                         <div className="trust-logos">
-                            <span className="trust-logo">DaVinci Resolve</span>
+                            <span className="trust-logo">React</span>
                             <span className="trust-divider">•</span>
-                            <span className="trust-logo">After Effects</span>
+                            <span className="trust-logo">Next.js</span>
                             <span className="trust-divider">•</span>
-                            <span className="trust-logo">Topaz Video</span>
+                            <span className="trust-logo">Node.js</span>
                             <span className="trust-divider">•</span>
-                            <span className="trust-logo">Photoshop</span>
+                            <span className="trust-logo">TypeScript</span>
                         </div>
                     </div>
                 </div>
@@ -78,18 +77,18 @@ function Hero() {
                 {/* Stats strip */}
                 <div className="hero-stats">
                     <div className="stat">
-                        <span className="stat-number">1M+</span>
-                        <span className="stat-label mono">Views Generated</span>
-                    </div>
-                    <div className="stat-divider"></div>
-                    <div className="stat">
-                        <span className="stat-number">300+</span>
+                        <span className="stat-number">13+</span>
                         <span className="stat-label mono">Projects Delivered</span>
                     </div>
                     <div className="stat-divider"></div>
                     <div className="stat">
-                        <span className="stat-number">∞</span>
-                        <span className="stat-label mono">Revisions Included</span>
+                        <span className="stat-number">3+</span>
+                        <span className="stat-label mono">Years Experience</span>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat">
+                        <span className="stat-number">7+</span>
+                        <span className="stat-label mono">Industries Served</span>
                     </div>
                 </div>
             </div>
