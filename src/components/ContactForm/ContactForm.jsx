@@ -12,18 +12,14 @@ function ContactForm() {
         setSending(true)
 
         const form = e.currentTarget
-        const data = Object.fromEntries(new FormData(form))
+        const data = new FormData(form)
 
         try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            })
+            const res = await fetch('/api/contact', { method: 'POST', body: data })
             const json = await res.json()
 
             if (json.errors) {
-                setError(json.errors.email || json.errors.message || 'Something went wrong.')
+                setError(json.errors.email || json.errors.message || json.errors.message?.[0] || 'Something went wrong.')
             } else if (json.success) {
                 setSent(true)
                 form.reset()
@@ -83,7 +79,7 @@ function ContactForm() {
             />
             <textarea
                 name="message"
-                rows={4}
+                rows={5}
                 placeholder="Message"
                 required
                 className="contact-form-textarea"

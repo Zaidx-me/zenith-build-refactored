@@ -11,11 +11,30 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, fromName, email, subject, message } = req.body;
+  const contentType = req.headers["content-type"] || "";
+  let isBot, fromName, email, subject, message;
 
-  if (name) {
-    return res.status(200).json({ success: true });
+  if (contentType.includes("multipart/form-data")) {
+    const chunks = [];
+    for await (const chunk of req) chunks.push(chunk);
+    const buf = Buffer.concat(chunks);
+    const boundary = contentType.split("boundary=")[1];
+    const parts = parseMultipart(buf, boundary);
+    isBot = parts.name || "";
+    fromName = parts.fromName || "";
+    email = parts.email || "";
+    subject = parts.subject || "";
+    message = parts.message || "";
+  } else {
+    const body = req.body || {};
+    isBot = String(body.name || "");
+    fromName = String(body.fromName || "");
+    email = String(body.email || "");
+    subject = String(body.subject || "");
+    message = String(body.message || "");
   }
+
+  if (isBot) return res.status(200).json({ success: true });
 
   const errors = {};
 
@@ -25,10 +44,10 @@ export default async function handler(req, res) {
   if (!message) {
     errors.message = "Please enter a message.";
   }
-  if (email && email.length > MAX_EMAIL_LENGTH) {
+  if (email.length > MAX_EMAIL_LENGTH) {
     errors.email = "Email is too long.";
   }
-  if (message && message.length > MAX_MESSAGE_LENGTH) {
+  if (message.length > MAX_MESSAGE_LENGTH) {
     errors.message = "Message is too long.";
   }
 
@@ -58,14 +77,14 @@ export default async function handler(req, res) {
 
   const textBody = [
     subject ? `Subject: ${subject}` : "",
-    `From: ${fromName || "Anonymous"} (${email})`,
+    `From: ${fromName} (${email})`,
     `Date: ${date}`,
     "",
     message,
     "",
     "—",
     "Zenith Build",
-    "contact@zenithbuild.com",
+    "contact@zareen.qzz.io",
   ]
     .filter(Boolean)
     .join("\n");
@@ -77,11 +96,11 @@ export default async function handler(req, res) {
   <table style="max-width: 560px; margin: 0 auto; border-collapse: collapse;">
     <tr><td style="padding-bottom: 8px; font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px;">New inquiry</td></tr>
     <tr><td style="padding-bottom: 4px; font-size: 13px; color: #888;">From</td></tr>
-    <tr><td style="padding-bottom: 16px; font-size: 16px; font-weight: 600;">${esc(fromName || "Anonymous")} &lt;${esc(email)}&gt;</td></tr>
+    <tr><td style="padding-bottom: 16px; font-size: 16px; font-weight: 600;">${esc(fromName) || "—"} &lt;${esc(email)}&gt;</td></tr>
     ${subject ? `<tr><td style="padding-bottom: 4px; font-size: 13px; color: #888;">Subject</td></tr><tr><td style="padding-bottom: 16px; font-size: 16px; font-weight: 600;">${esc(subject)}</td></tr>` : ""}
     <tr><td style="padding-bottom: 4px; font-size: 13px; color: #888;">Message</td></tr>
     <tr><td style="padding-bottom: 24px; font-size: 15px; line-height: 1.6; color: #333; white-space: pre-wrap;">${esc(message)}</td></tr>
-    <tr><td style="padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #999;">Zenith Build &mdash; contact@zenithbuild.com</td></tr>
+    <tr><td style="padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #999;">Zenith Build &mdash; contact@zareen.qzz.io</td></tr>
   </table>
 </body>
 </html>`.trim();
@@ -93,7 +112,7 @@ export default async function handler(req, res) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Zenith Build <onboarding@resend.dev>",
+      from: "Zenith Build <contact@zareen.qzz.io>",
       to: recipients,
       reply_to: email,
       subject: `New inquiry from ${fromName || email}`,
@@ -111,4 +130,31 @@ export default async function handler(req, res) {
   }
 
   return res.status(200).json({ success: true });
+}
+
+function parseMultipart(buf, boundary) {
+  const result = {};
+  const boundaryBuf = Buffer.from("--" + boundary);
+  const parts = [];
+
+  let start = buf.indexOf(boundaryBuf) + boundaryBuf.length + 2;
+  while (true) {
+    const end = buf.indexOf(boundaryBuf, start);
+    if (end === -1) break;
+    parts.push(buf.slice(start, end - 2));
+    start = end + boundaryBuf.length + 2;
+  }
+
+  for (const part of parts) {
+    const headerEnd = part.indexOf("\r\n\r\n");
+    if (headerEnd === -1) continue;
+    const headers = part.slice(0, headerEnd).toString();
+    const body = part.slice(headerEnd + 4).toString();
+    const nameMatch = headers.match(/name="([^"]+)"/);
+    if (nameMatch) {
+      result[nameMatch[1]] = body;
+    }
+  }
+
+  return result;
 }
