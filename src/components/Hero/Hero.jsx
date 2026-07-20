@@ -42,6 +42,12 @@ function Hero() {
                         </span>
                     </h1>
 
+                    {/* Problem statement */}
+                    <p className="hero-problem">
+                        Your users deserve better than a mediocre website.
+                        <span className="highlight"> We build digital products that actually work.</span>
+                    </p>
+
                     {/* Subtitle */}
                     <p className="hero-subtitle">
                         We craft digital experiences that blend bold creativity with strategic thinking.

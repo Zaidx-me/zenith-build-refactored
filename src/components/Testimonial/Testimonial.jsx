@@ -56,7 +56,7 @@ function Testimonial() {
     }, [])
 
     return (
-        <section className="testimonial" ref={sectionRef}>
+        <section id="testimonials" className="testimonial" ref={sectionRef}>
             <div className="container">
                 <div className="testimonial-header reveal">
                     <div className="quote-mark">"</div>

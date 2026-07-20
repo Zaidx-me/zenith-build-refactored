@@ -130,6 +130,10 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    .why-us-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -147,4 +151,68 @@
         height: 1px;
         min-height: auto;
     }
+}
+
+/* Why Us */
+.why-us {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.why-us-card {
+    padding: 2rem;
+    background: var(--void);
+    border: 1px solid var(--border);
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+}
+
+.why-us-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out);
+}
+
+.why-us-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.why-us-card:hover::before {
+    opacity: 1;
+}
+
+.why-us-number {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.why-us-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.why-us-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
 }

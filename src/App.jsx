@@ -2,8 +2,9 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Narrative from './components/Narrative/Narrative'
 import Work from './components/Work/Work'
-import Capabilities from './components/Capabilities/Capabilities'
 import Testimonial from './components/Testimonial/Testimonial'
+import Capabilities from './components/Capabilities/Capabilities'
+import InterstitialCTA from './components/InterstitialCTA/InterstitialCTA'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 import Dither from './components/Dither'
@@ -35,8 +36,16 @@ function App() {
           <Hero />
           <Narrative />
           <Work />
-          <Capabilities />
+          <InterstitialCTA
+            heading={<>Liked what you <span className="accent">saw</span>?</>}
+            subtext="Let's turn your idea into a product people love. No commitment, no pressure — just a conversation."
+          />
           <Testimonial />
+          <Capabilities />
+          <InterstitialCTA
+            heading={<>Ready to build something <span className="accent">extraordinary</span>?</>}
+            subtext="We take on a limited number of projects each month to ensure quality. Let's see if we're the right fit."
+          />
           <CTA />
         </main>
         <Footer />

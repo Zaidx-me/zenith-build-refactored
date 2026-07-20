@@ -93,6 +93,38 @@ function Narrative() {
                         </p>
                     </div>
                 </div>
+
+                {/* Why us */}
+                <div className="why-us reveal">
+                    <span className="section-label mono">Why Zenith Build</span>
+                    <div className="why-us-grid">
+                        <div className="why-us-card reveal reveal-delay-1">
+                            <span className="why-us-number mono">01</span>
+                            <h4 className="why-us-title">Outcome-Driven</h4>
+                            <p className="why-us-desc">
+                                We don't just write code — we solve business problems. Every feature
+                                ties back to a measurable goal: more conversions, faster load times,
+                                happier users.
+                            </p>
+                        </div>
+                        <div className="why-us-card reveal reveal-delay-2">
+                            <span className="why-us-number mono">02</span>
+                            <h4 className="why-us-title">Full-Stack Capability</h4>
+                            <p className="why-us-desc">
+                                From pixel-perfect UI to cloud infrastructure, we handle the entire
+                                stack. No handoffs, no gaps, no "that's not our department."
+                            </p>
+                        </div>
+                        <div className="why-us-card reveal reveal-delay-3">
+                            <span className="why-us-number mono">03</span>
+                            <h4 className="why-us-title">Startup Speed</h4>
+                            <p className="why-us-desc">
+                                We ship fast without cutting corners. Agile sprints, continuous
+                                deployment, and weekly demos keep you in the loop and moving forward.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )

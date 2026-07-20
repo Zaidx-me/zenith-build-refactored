@@ -103,15 +103,31 @@
     font-size: 0.6em;
 }
 
+/* Problem statement */
+.hero-problem {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text);
+    max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeSlideUp 0.8s 0.45s var(--ease-out) forwards;
+}
+
+.hero-problem .highlight {
+    color: var(--accent);
+}
+
 /* Subtitle */
 .hero-subtitle {
-    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
     color: var(--text-secondary);
     max-width: 500px;
     line-height: 1.6;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: fadeSlideUp 0.8s 0.5s var(--ease-out) forwards;
+    animation: fadeSlideUp 0.8s 0.55s var(--ease-out) forwards;
 }
 
 .hero-subtitle .highlight {
